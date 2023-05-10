@@ -1,0 +1,669 @@
+/* -------------------
+01. google fonts
+-------------------*/
+
+/* poppins wghts 300 400 500 600 700  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* -------------------
+02. variables
+-------------------*/
+
+:root {
+  --orange: hsl(36, 80%, 50%);
+  --white: hsl(100, 100%, 100%);
+  --WHITE: hsl(100, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --black-90: hsl(0, 0%, 10%);
+  --black-70: hsl(0, 0%, 30%);
+  --black-alpha-40: hsla(0, 0%, 0%, 0.4);
+  --yellow-light: hsl(44, 95%, 83%);
+  --green-light: hsl(158, 68%, 75%);
+  --red-light: hsl(0, 84%, 80%);
+  --orange-light: hsl(20, 85%, 80%);
+  --select-box-bg-color: hsl(0, 0%, 100%);
+  --border-color-1: hsl(0, 0%, 90%);
+}
+/* -------------------
+03. body
+-------------------*/
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--black-70);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--main-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black-90);
+  line-height: 1.3;
+}
+h3 {
+  font-size: 20px;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  color: var(--WHITE) !important;
+  background-color: var(--main-color) !important;
+}
+
+/* -------------------
+00. header
+-------------------*/
+header {
+  border-bottom: 1px solid var(--border-color-2);
+}
+.header-logo a {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black-70);
+}
+.header-logo a span {
+  color: var(--main-color);
+}
+header .menu-item {
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+}
+header .menu-item > a {
+  display: block;
+  padding: 24px 0px;
+  font-weight: 400;
+  color: var(--black-90);
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+header .menu-item:hover > a {
+  color: var(--main-color);
+}
+header .menu-item > a i {
+  font-size: 13px;
+  margin-left: 3px;
+  pointer-events: none;
+}
+header .sub-menu {
+  position: absolute;
+  background-color: var(--WHITE);
+  left: 0px;
+  top: 100%;
+  width: 210px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+}
+@media (min-width: 992px) {
+  header .menu-item:hover > .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header .sub-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--black-90);
+}
+header .sub-menu a:hover {
+  color: var(--main-color);
+}
+.header-backdrop,
+.header-close-btn,
+.header-hamburger-btn {
+  display: none;
+}
+/* -------------------
+05. box
+-------------------*/
+.box {
+  background-color: var(--WHITE);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+/* -------------------
+00. customized bootstrap classes
+-------------------*/
+.container {
+  --bs-gutter-x: 15px;
+  max-width: 1140px;
+}
+.row {
+  --bs-gutter-x: 30px;
+}
+/* -------------------
+00. animation keyframes
+-------------------*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* -------------------
+00. Section padding - title
+-------------------*/
+.section-paddding {
+  padding: 60px 0;
+}
+.section-title {
+  margin-bottom: 40px;
+}
+.section-title .title {
+  font-size: 20px;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+.section-title .sub-title {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--black-90);
+}
+/* -------------------
+09. buttons
+-------------------*/
+.btn-theme {
+  background-color: var(--main-color);
+  color: var(--WHITE);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+.btn-theme:hover {
+  color: var(--WHITE);
+  background-color: var(--button-hover-color);
+}
+.btn-theme:focus {
+  box-shadow: 0 0 8px var(--main-color);
+}
+/* -------------------
+11. circular image
+-------------------*/
+.circular-img {
+  max-width: 360px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  /* background-color: brown; */
+}
+.circular-img-inner {
+  text-align: center;
+  border-radius: 0 0 180px 180px;
+  overflow: hidden;
+  /* background-color: green; */
+}
+.circular-img-circle {
+  height: 360px;
+  width: 360px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: black;
+}
+.circular-img img {
+  position: relative;
+  z-index: 1;
+}
+/* -------------------
+21. banner
+-------------------*/
+.banner-section {
+  /* background-color: red; */
+  padding: 80px 0;
+  min-height: 680px;
+}
+.banner-section .banner-text h2 {
+  font-size: 20px;
+  color: var(--main-color);
+}
+.banner-section .banner-text h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.banner-section .circular-img-circle {
+  background-color: var(--red-light);
+}
+/* -------------------
+22.fun facts section
+-------------------*/
+.fun-facts-item {
+  padding: 15px 0;
+  text-align: center;
+}
+.fun-facts-item .style-1 {
+  color: var(--black-70);
+}
+.fun-facts-item .style-2 {
+  color: var(--green-light);
+}
+.fun-facts-item .style-3 {
+  color: var(--red-light);
+}
+.fun-facts-item .style-4 {
+  color: var(--orange-light);
+}
+.fun-facts-item h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.fun-facts-item p {
+  margin: 0;
+  text-transform: uppercase;
+}
+/* -------------------
+23.courses section
+-------------------*/
+.courses-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.courses-item .link {
+  color: var(--black-70);
+  display: inline-block;
+}
+.courses-item .title {
+  text-transform: capitalize;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+.courses-item:hover .title {
+  color: var(--main-color);
+}
+.courses-item .instructor {
+  text-transform: capitalize;
+  margin: 0 0 12px;
+}
+.courses-item .instructor img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.courses-item .rating {
+  font-size: 14px;
+}
+.courses-item .average-rating {
+  font-weight: 600;
+  color: var(--orange);
+}
+.courses-item .average-stars i {
+  color: var(--orange);
+}
+.courses-item .price {
+  position: absolute;
+  background-color: var(--main-color);
+  color: var(--WHITE);
+  padding: 4px 8px;
+  border-radius: 4px;
+  top: 15px;
+  right: 10px;
+}
+.courses-item .img-box img {
+  width: 100%;
+  border-radius: 5px;
+}
+/* -------------------
+24.testimonials section
+-------------------*/
+.testimonials-section .img-box {
+  height: 150px;
+  width: 150px;
+  background-color: var(--red-light);
+  margin: 30px auto 50px;
+}
+.testimonials-section .img-box::after,
+.testimonials-section .img-box::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--red-light);
+  animation: spin 5s ease infinite;
+}
+.testimonials-section .img-box::before {
+  width: 180px;
+  height: 180px;
+  left: -15px;
+  top: -15px;
+  border-left: 1px solid transparent;
+}
+.testimonials-section .img-box::after {
+  width: 210px;
+  height: 210px;
+  left: -30px;
+  top: -30px;
+  border-right: 1px solid transparent;
+}
+.testimonials-section h3 {
+  text-transform: capitalize;
+}
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.testimonials-section .decoration-circles-item {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials-section .decoration-circles-item:nth-child(1) {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--yellow-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(2) {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--green-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(3) {
+  position: absolute;
+  left: 18%;
+  top: 65%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(4) {
+  position: absolute;
+  left: 65%;
+  top: 33%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--orange-light);
+}
+/* -------------------
+25.bai section
+-------------------*/
+.bai-section {
+  margin-bottom: 100px;
+}
+.bai-section .circular-img-circle {
+  background-color: var(--yellow-light);
+}
+
+/* -------------------
+00.Footer section
+-------------------*/
+.footer-box {
+  padding: 50px 0 20px;
+  border-top: 1px solid var(--border-color-2);
+}
+.footer-item {
+  margin: 0 0 30px;
+}
+.footer-item h3 {
+  text-transform: capitalize;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.footer-item .footer-logo {
+  color: var(--black-70);
+  text-transform: uppercase;
+}
+.footer-item .footer-logo span {
+  color: var(--main-color);
+}
+.footer-item ul li:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-item ul a {
+  color: var(--black-70);
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.footer-item ul a:hover {
+  color: var(--main-color);
+}
+
+.footer-item ul a::after {
+  position: absolute;
+  content: " ";
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.footer-item ul a:hover::after {
+  width: 100%;
+}
+
+.footer-item ul a .social-icon {
+  margin-right: 9px;
+}
+
+/* -------------------
+00.breadcrumb
+-------------------*/
+.breadcrumb-div {
+  padding: 10px 0;
+}
+.breadcrumb-div .breadcrumb-item {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.breadcrumb-div .breadcrumb-item + .breadcrumb-item::before,
+.breadcrumb-div .breadcrumb-item.active {
+  color: var(--black-70);
+}
+
+/* ------------------- Courses Pages -------------------*/
+
+/* -------------------
+00.Courses Tabs
+-------------------*/
+.nav-tabs .nav-link {
+  background-color: var(--white);
+  border-color: var(--border-color-2);
+  text-transform: capitalize;
+  padding: 5px 12px;
+  margin: 0 5px 10px;
+  border-radius: 5px;
+  color: var(--black-70);
+  font-size: 16px;
+}
+.nav-tabs .nav-link.active {
+  background-color: var(--main-color);
+  color: var(--WHITE);
+  border: transparent;
+}
+
+/* -------------------
+00.pagination
+-------------------*/
+.page-item.disabled .page-link,
+.page-link {
+  border: none;
+  background-color: transparent;
+  color: var(--black-70);
+}
+.page-item.active .page-link {
+  background-color: var(--main-color);
+}
+.page-link:hover {
+  background-color: var(--main-color);
+  color: var(--WHITE);
+}
+
+/* -------------------
+00.Course details page
+-------------------*/
+.course-details {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/*--- Course header ---*/
+.course-header h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+.course-header .average-rating {
+  font-weight: 600;
+  color: var(--orange);
+}
+.course-header .average-stars i {
+  font-size: 14px;
+  color: var(--orange);
+}
+.course-header ul li {
+  margin: 6px 0 0;
+  text-transform: capitalize;
+}
+.course-header ul li span {
+  margin-left: 5px;
+}
+.course-header ul li span a {
+  color: var(--main-color);
+}
+.course-details-tabs {
+  margin: 30px 0 20px;
+}
+.course-details-tabs .nav-link {
+  margin: 0 10px;
+}
+
+/*--- course curriculm ---*/
+.course-curriculum .accordion-item {
+  background-color: transparent;
+  border-color: var(--border-color-1);
+}
+.course-curriculum .accordion-button {
+  background-color: transparent;
+  color: var(--black-90);
+  font-weight: 300;
+  flex-wrap: wrap;
+  padding-left: 50px;
+}
+.course-curriculum .accordion-button:not(.collapsed) {
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color-1);
+  transition: none;
+  box-shadow: none;
+}
+.course-curriculum .accordion-button:focus {
+  box-shadow: none;
+}
+.course-curriculum .accordion-button span {
+  position: absolute;
+  right: 17px;
+  font-size: 14px;
+}
+.course-curriculum .accordion-button:not(.collapsed) span {
+  font-weight: 500;
+}
+.course-curriculum .accordion-button:not(.collapsed)::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.course-curriculum .accordion-button::after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  background-image: none;
+  position: absolute;
+  left: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.course-curriculum ul li {
+  position: relative;
+  padding: 0 50px 0 20px;
+  text-transform: capitalize;
+}
+
+.course-curriculum ul li i {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--black-70);
+  font-size: 12px;
+}
+
+.course-curriculum ul li span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/*--- course description ---*/
+.course-description h4 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/*--- course instructor ---*/
+.course-instructor .img-box img {
+  max-width: 128px;
+  margin-bottom: 15px;
+}
+.course-instructor h4 {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.course-instructor h4 span {
+  font-weight: 300;
+}
+.course-instructor ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.course-instructor ul li i {
+  color: var(--main-color);
+  margin-right: 5px;
+}
+/*-- course review --*/
+.rating-summary .average-rating {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--black-90);
+}
+.rating-summary .average-stars{
+  color: var(--orange) ;
+}
