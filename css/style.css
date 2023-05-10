@@ -664,6 +664,62 @@ header .sub-menu a:hover {
   font-weight: 700;
   color: var(--black-90);
 }
-.rating-summary .average-stars{
-  color: var(--orange) ;
+.rating-summary .average-stars {
+  color: var(--orange);
+}
+
+.rating-summary .rating-bars-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.rating-summary .progress {
+  height: 8px;
+  background-color: var(--border-color-2);
+  width: calc(100% - 120px);
+  margin-right: 20px;
+  /* margin-left: 10px; */
+  border-radius: 5px;
+}
+
+.rating-summary .progress .progress-bar {
+  background-color: var(--main-color);
+}
+
+.start-numbers {
+  min-width: 60px;
+  color: var(--orange);
+}
+.review-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 65px;
+}
+.review-item .img-box {
+  max-width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0 ;
+}
+.review-item h4 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0 0 5px;
+  color: var(--black-90);
+}
+.review-item .stars-rating i{
+font-size: 14px;
+color: var(--orange);
+}
+.review-item .stars-rating .date{
+  margin-left: 5px;
+font-size: 14px;
+display: inline-block;
+}
+
+.review-item .stars-rating p{
+  margin: 5px 0 0;
 }
