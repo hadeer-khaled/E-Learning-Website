@@ -690,6 +690,35 @@ header .sub-menu a:hover {
   min-width: 60px;
   color: var(--orange);
 }
+.review-filter {
+  margin: 0 0 35px;
+  width: 200px;
+}
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+.form-control {
+  height: 48px;
+  color: var(--black-90);
+  box-shadow: none;
+}
+select.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: var(--border-color-1);
+}
+select.form-control:focus option {
+  background-color: var(--select-box-bg-color);
+}
+.select-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 13px;
+}
 .review-item {
   position: relative;
   margin-bottom: 30px;
@@ -701,7 +730,7 @@ header .sub-menu a:hover {
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: 0 ;
+  top: 0;
 }
 .review-item h4 {
   font-size: 16px;
@@ -710,16 +739,172 @@ header .sub-menu a:hover {
   margin: 0 0 5px;
   color: var(--black-90);
 }
-.review-item .stars-rating i{
-font-size: 14px;
-color: var(--orange);
+.review-item .stars-rating i {
+  font-size: 14px;
+  color: var(--orange);
 }
-.review-item .stars-rating .date{
+.review-item .stars-rating .date {
   margin-left: 5px;
-font-size: 14px;
-display: inline-block;
+  font-size: 14px;
+  display: inline-block;
 }
 
-.review-item .stars-rating p{
+.review-item .stars-rating p {
   margin: 5px 0 0;
+}
+
+/*-- Course Sidebar--*/
+.course-sidebar .img-box {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.course-sidebar .img-box::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black-alpha-40);
+}
+.course-sidebar .play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--WHITE);
+}
+
+.course-sidebar .img-box P {
+  position: absolute;
+  color: var(--WHITE);
+  top: calc(50% + 40px);
+  font-weight: 500;
+  width: 100%;
+}
+.price span {
+  margin-right: 8px;
+}
+.price .price-old {
+  text-decoration: line-through;
+}
+.price .price-new {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--black-90);
+}
+.price .price-discount {
+  color: var(--main-color);
+}
+
+.features-list {
+margin: 0 0 20px;
+}
+.features-list li{
+position: relative;
+padding-left: 21px;
+margin-bottom: 10px;
+}
+.features-list li::before{
+content: " ";
+height: 6px;
+width: 6px;
+background-color: var(--main-color);
+position: absolute;
+left: 0;
+top: 9px;
+border-radius: 50%;
+}
+
+.btn-block{
+width: 100%;
+}
+/* color: var(--WHITE); */
+
+/*-- Video Modal--*/
+.video-modal .btn-close{
+  width: 35px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  top:-35px;
+  right: 0;
+  color: var(--WHITE);
+  font-size: 16px;
+  padding: 0;
+  background-image: none;
+}
+.video-modal .modal-content{
+  border: 0;
+}
+.video-modal .modal-body{
+  padding: 0;
+}
+
+
+/* -------------------
+00.Log In page
+-------------------*/
+
+.form-title{
+  font-size: 24px;
+  margin: 0 0 30px;
+  font-weight: 600;
+}
+.login-section{
+  margin-bottom: 50px;
+}
+
+.form-group::placeholder{
+color: var(--black-70);
+}
+.btn-form{
+  height: 48px;
+}
+
+/* -------------------
+00.Contact page
+-------------------*/
+
+.contact-section {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.contact-item{
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 40px;
+}
+button.btn-form{
+  width: 100%;
+}
+.contact-item .icon-box{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  color: var(--WHITE);
+} 
+textarea.form-control{
+  height: 120px;
+  resize: none;
 }
