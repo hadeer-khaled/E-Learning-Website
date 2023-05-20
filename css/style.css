@@ -713,7 +713,7 @@ header .sub-menu a:hover {
 }
 .form-control {
   height: 48px;
-  color: var(--black-90);
+  color: rgba(0, 0, 0, 0.669);
   box-shadow: none;
 }
 select.form-control:focus {
