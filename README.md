@@ -1,11 +1,13 @@
 # E-Learning-Website
-Template Features:-
 
-• Based on Bootstrap 5.x
-• 6 Pages
-• Modern and clean design.
-• 100% Responsive
-• Live Style Switcher
-• 5 Preset Colors (all colors can be customized)
-• Light/Dark mode
-• Glassmorphism design 
+E-Learning-Website developed using HTML5, CSS3, Bootstrap5 and JavaScript. 
+
+Features:
+- six pages.
+- live style switcher.
+- light and dark modes.
+- glass morphism.
+- 100% responsive.
+
+Press [here](#https://hadeer-khaled.github.io/E-Learning-Website/) to try it 🤸‍♀️
+
