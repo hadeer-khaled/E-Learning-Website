@@ -117,10 +117,12 @@ function themeGlassEffect() {
             glassStyle.disabled = true;
         }
     };
+
     if (localStorage.getItem("glass-effect") !== null) {
         enableGlass();
         // console.log("true")
     }
+    
     if (!(glassStyle.hasAttribute("disabled"))) {
         glassEffectCheckBox.checked = true;
     }
