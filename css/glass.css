@@ -1,46 +1,96 @@
 
+/* ---------- Two Circles-----------*/
 html::before,
-html::after{
-    content:"";
-    position: fixed;
-    z-index: -2;
-    border-radius: 50%;
+html::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  border-radius: 50%;
 }
-html::before{
-    height: 100px;
-    width: 100px;
-    top: 20%;
-    left: calc(50% - 660px);
-    background-image: linear-gradient(to right bottom , var(--decoration-bg-color-1), var(--WHITE));
-    opacity: 0.7;
+html::before {
+  height: 100px;
+  width: 100px;
+  top: 20%;
+  left: calc(50% - 660px);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--decoration-bg-color-1),
+    var(--WHITE)
+  );
+  opacity: 0.7;
 }
-html::after{
-    height: 150px;
-    width: 150px;
-    bottom: 20%;
-    right: calc(50% - 680px);
-    background-image: linear-gradient(to right bottom , var(--decoration-bg-color-2), var(--WHITE));
-    opacity: 0.7;
+html::after {
+  height: 150px;
+  width: 150px;
+  bottom: 20%;
+  right: calc(50% - 680px);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--decoration-bg-color-2),
+    var(--WHITE)
+  );
+  opacity: 0.7;
 }
-body{
-    --white:hsla(0 , 0% , 100% , 0.25);
-    --border-color-2:hsla(0 , 0% , 100% , 0.40);
-    --border-color-1:hsla(0 , 0% , 0% , 0.1);
-    --shadow: none;
-    background-image: linear-gradient(to right , var(--body-gradient-bg-color-1), 
-    var(--body-gradient-bg-color-2));
-    background-attachment: fixed;
-    padding: 40px 0;
+body {
+  --white: hsla(0, 0%, 100%, 0.25);
+  --border-color-2: hsla(0, 0%, 100%, 0.04);
+  --border-color-1: hsla(0, 0%, 100%, 0.1);
+  --shadow: none;
+  background-image: linear-gradient(
+    to right,
+    var(--body-gradient-bg-color-1),
+    var(--body-gradient-bg-color-2)
+  );
+  background-attachment: fixed;
+  padding: 40px 0;
+  --backdrop-filter-blur: blur(5px);
 }
-.main-wrapper{
-    max-width: 1200px;
-    background-color: var(--white);
-    border: 1px solid var(--border-color-2);
-    margin: auto;
-    border-radius: 20px ;
-    position: relative;
+.main-wrapper {
+  max-width: 1200px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color-2);
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
 }
 
-.main-wrapper::before{
-    
+.main-wrapper::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  --webkit-backdrop-filter: var(--backdrop-filter-blur);
+  backdrop-filter: var(--backdrop-filter-blur);
+  z-index: -1;
+  border-radius: 20px;
+}
+header .sub-menu,
+.box {
+  border: 1px solid var(--border-color-2);
+}
+header .sub-menu,
+.box,
+.modal,
+.style-switcher {
+  --webkit-backdrop-filter: var(--backdrop-filter-blur);
+  backdrop-filter: var(--backdrop-filter-blur);
+}
+/*-------------------------- Dark Glass -----------------------------*/
+body.dark {
+  --white: hsla(0, 0%, 100%, 0.05);
+  --border-color-2: hsla(0, 0%, 100%, 0.07);
+  --border-color-1: hsla(0, 0%, 100%, 0.15);
+}
+body.dark::before {
+content: " ";
+position: fixed;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: var(--BLACK );
+opacity: 0.2;
+z-index: -1;
 }
