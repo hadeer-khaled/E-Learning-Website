@@ -27,13 +27,23 @@ styleSwitcherToggle()
 function colorThemes() {
     const colorStyle = document.querySelector(".js-color-style");
     var themeColorContainer = document.querySelector(".js-theme-colors")
-    themeColorContainer.addEventListener("click", ({target}) => {
+    themeColorContainer.addEventListener("click", ({ target }) => {
         if (target.classList.contains("js-theme-color-item")) {
             // console.log(target.getAttribute("data-js-theme-color"))
             localStorage.setItem("color", target.getAttribute("data-js-theme-color"))
             setColor()
         }
-    })
+    });
+
+    if (localStorage.getItem("color") !== null) {
+        setColor()
+    }
+    else {
+        // const defaultColor = colorStyle.getAttribute("href").split("/").pop().split(".").shift();
+        // console.log(defaultColor)
+        document.querySelector("[data-js-theme-color= color-1]").classList.add("active")
+    }
+
     function setColor() {
         let path = colorStyle.getAttribute("href").split("/")
         path = path.slice(0, path.length - 1)
@@ -43,16 +53,9 @@ function colorThemes() {
             document.querySelector(".js-theme-color-item.active").classList.remove("active")
         }
         document.querySelector("[data-js-theme-color=" + localStorage.getItem("color") +"]" ).classList.add("active")
-    }
-
-    if (localStorage.getItem("color") !== null) {
-        setColor()
-    }
-    else {
-        const defaultColor = colorStyle.getAttribute("href").split("/").pop().split(".").shift();
-        document.querySelector("[data-js-theme-color=" + defaultColor +"]" ).classList.add("active")
-    }
+    };
 }
+
 colorThemes()
 
 
@@ -89,4 +92,4 @@ function themeLightDark() {
 }
 themeLightDark() 
 
-// ---------------- Glass Effect ------------------ // 
+// // ---------------- Glass Effect ------------------ // 
