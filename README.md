@@ -29,15 +29,15 @@ E-Learning-Website developed using HTML5, CSS3, Bootstrap5 and JavaScript.
 
 4- Log In
 
-![Log In page image](screenshots/log-in.png)  
+![Log In page image](screenshots/log%20in.png)  
 
 5- Sign Up
 
-![Sign Up page image](screenshots/sign-up.png)  
+![Sign Up page image](screenshots/sign%20up.png)  
 
 6- Contact
 
 ![Contact page image](screenshots/Contact.png)
 
-Press **[here](#https://hadeer-khaled.github.io/E-Learning-Website/)** to try it. 🤸‍♀️
+Press **[here](https://hadeer-khaled.github.io/E-Learning-Website/)** to try it. 🤸‍♀️
 
